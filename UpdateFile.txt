@@ -5,3 +5,6 @@ Now on the dev branch --
 Started work on the domainFeatureBranch
 
 Finished work on the domainFeatureBranch
+
+Now on the dev branch. Dev branch ready to accept domain branch 
+
