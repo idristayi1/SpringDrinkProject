@@ -126,7 +126,7 @@ public class Drink {
 
 	@Override
 	public String toString() {
-		return "Drink [id=" + id + ", name=" + name + ", make=" + make + ", volume=" + volume + ", taste=" + taste
+		return "Drink [name=" + name + ", make=" + make + ", volume=" + volume + ", taste=" + taste
 				+ ", colour=" + colour + "]";
 	}
 
