@@ -3,3 +3,5 @@ Start of the project
 Now on the dev branch --
 
 Started work on the domainFeatureBranch
+
+Finished work on the domainFeatureBranch
