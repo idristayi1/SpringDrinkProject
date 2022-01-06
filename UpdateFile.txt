@@ -1,15 +1,21 @@
 Start of the project
 
-<<<<<<< HEAD
-Now on the dev branch. Dev branch ready to accept domain branch 
-=======
 Now on the dev branch --
+
+Branched into domain feature branch
 
 Started work on the domainFeatureBranch
 
 Finished work on the domainFeatureBranch
->>>>>>> domainFeatureBranch
+
+Now on the dev branch. Dev branch ready to accept domain branch 
+
+Branched into repo feature branch
 
 Now on the repo branch and started work
 
 Finished work on the repo branch
+
+Now on the dev branch --Dev branch ready to accept repo branch 
+
+
