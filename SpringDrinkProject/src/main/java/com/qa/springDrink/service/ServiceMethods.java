@@ -9,7 +9,7 @@ public interface ServiceMethods <T> {
 	T create (T t);
 	
 	//Read All
-	List<T> getAll();
+	List<T> getAll ();
 	
 	//Read By Id
 	T getById(long id);

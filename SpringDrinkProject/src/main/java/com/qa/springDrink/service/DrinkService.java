@@ -1,5 +1,6 @@
 package com.qa.springDrink.service;
-import java.util.List.*;
+
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
@@ -25,7 +26,7 @@ public class DrinkService implements ServiceMethods <Drink> {
 	}
 
 	@Override
-	public List<Drink> getAll() {
+	public List<Drink>getAll () {
 		
 		return this.repo.findAll();
 	}
