@@ -36,4 +36,6 @@ DrinkTest code written
 
 DrinkControllerUnitTest code written
 
+Application resources written
 
+Ready to accept merger of ApplicationResourcesBranch into devBranch
