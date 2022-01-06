@@ -10,4 +10,6 @@ Started work on the domainFeatureBranch
 Finished work on the domainFeatureBranch
 >>>>>>> domainFeatureBranch
 
-Now on the repo branch and started work 
+Now on the repo branch and started work
+
+Finished work on the repo branch
