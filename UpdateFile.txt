@@ -1,4 +1,4 @@
-Start of the project
+Project start
 
 Now on the dev branch --
 
@@ -24,3 +24,9 @@ Repo merged and dev branched into service
 ServiceMethods and DrinkService code written 
 
 Ready to recieve the ControllerBranch
+
+Work on the controllerBranch complete
+
+Controller merged into Dev branch
+
+DrinkServiceTesting code written
