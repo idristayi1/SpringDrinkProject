@@ -1,9 +1,12 @@
 package com.qa.springDrink.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.assertj.core.api.Assertions.assertThat;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
@@ -54,10 +57,10 @@ public class DrinkControllerUnitTest {
 	@Test
 	public void getAllTest() throws Exception {
 		
-		List<Drink> availableDrinks = new ArrayList();
+		List<Drink> availableDrinks = new ArrayList<>();
 			
 		Drink firstDrink = new Drink("Pepsi", "Pepsi-co", 33, "Citrus", "Black");
-		Drink secondDrink = new Drink("Fanta", "Coca-cola", 50, "Orange", "Yellow");
+		availableDrinks.add(firstDrink);
 	
 		Mockito.when(this.service.getAll()).thenReturn(availableDrinks);
 		
@@ -66,7 +69,6 @@ public class DrinkControllerUnitTest {
 				.andExpect(status().isOk());
 
 				
-		
 	}
 
 	@Test
@@ -75,14 +77,44 @@ public class DrinkControllerUnitTest {
 		long id = 1;
 		Drink firstDrink = new Drink(1L, "Pepsi", "Pepsi-co", 33, "Citrus", "Black");
 		
-			
+		String entryAsJSON = this.mapper.writeValueAsString(firstDrink);
+		
 		Mockito.when(this.service.getById(id)).thenReturn(firstDrink);
 		
 		mvc.perform(get("/drink/readById/1", 1))
-					.andExpect(status().isOk());
+					.andExpect(status().isOk())
+					.andExpect(content().json(entryAsJSON));
 	
 		
+	}
+	
+	@Test
+	public void updateTest() throws Exception {
+	
+		
+		Drink updatingDrinkOne = new Drink ("Apple", "Fruit-co", 25, "sweet", "colourless");
+
+		
+		String resultString = mvc.perform(put("/drink/update/1")
+			.contentType(MediaType.APPLICATION_JSON)
+			.content(this.mapper.writeValueAsString(updatingDrinkOne)))
+				.andExpect(status().isAccepted())
+				.andReturn().getRequest().getContentAsString();
+			
+		Drink result = this.mapper.readValue(resultString, Drink.class);
+	assertThat(result).isEqualTo(updatingDrinkOne);
+			
+		
+		
+	}
+	
+	@Test
+	public void deleteTest() throws Exception {
+		
+		mvc.perform(delete("/drink/delete/1"))
+				.andExpect(status().isNotFound());
 	
 	}
 	
+		
 }

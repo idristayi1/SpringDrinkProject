@@ -110,7 +110,7 @@ public class Drink {
 		return Objects.hash(colour, make, name, taste, volume);
 	}
 
-	//To-String for presentation
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -123,7 +123,7 @@ public class Drink {
 		return Objects.equals(colour, other.colour) && Objects.equals(make, other.make)
 				&& Objects.equals(name, other.name) && Objects.equals(taste, other.taste) && volume == other.volume;
 	}
-
+	//To-String for presentation
 	@Override
 	public String toString() {
 		return "Drink [name=" + name + ", make=" + make + ", volume=" + volume + ", taste=" + taste
