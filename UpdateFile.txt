@@ -1,1 +1,45 @@
-Start of the project
+Project start
+
+Now on the dev branch --
+
+Branched into domain feature branch
+
+Started work on the domainFeatureBranch
+
+Finished work on the domainFeatureBranch
+
+Now on the dev branch. Dev branch ready to accept domain branch 
+
+Branched into repo feature branch
+
+Now on the repo branch and started work
+
+Finished work on the repo branch
+
+Now on the dev branch --Dev branch ready to accept repo branch
+
+Repo merged and dev branched into service
+
+
+ServiceMethods and DrinkService code written 
+
+Ready to recieve the ControllerBranch
+
+Work on the controllerBranch complete
+
+
+Controller merged into Dev branch
+
+DrinkServiceTesting code written
+
+DrinkTest code written
+
+DrinkControllerUnitTest code written
+
+Application resources 
+
+Commenced work on the Application Resources
+
+Ready to accept merger of ApplicationResourcesBranch into devBranch
+
+Written code for DrinkControllerIntegration and Unit Test

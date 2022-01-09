@@ -1,5 +1,11 @@
 package com.qa.springDrink.repo;
 
-public class DrinkRepo {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.qa.springDrink.domain.Drink;
+
+public interface DrinkRepo extends JpaRepository<Drink, Long> {
+	
+	
 
 }
