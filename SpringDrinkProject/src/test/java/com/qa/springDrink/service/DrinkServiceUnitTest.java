@@ -56,12 +56,14 @@ public class DrinkServiceUnitTest {
 			
 		Drink firstDrink = new Drink("Fanta", "Coca-cola", 50, "Orange", "Yellow");
 		Drink secondDrink = new Drink("Pepsi", "Pepsi-co", 33, "Citrus", "Black");
+		drinks.add(firstDrink);
+		drinks.add(secondDrink);
 		
 	//Testing the actual method i.e. the getAll method from DrinkService
 		Mockito.when(this.repo.findAll()).thenReturn(drinks);
 		
 		
-	//Here we are checking the expected value (output) is the same as the actual value (method itself)		
+	//Checking the expected value (output) is the same as the actual value (method itself)		
 		List<Drink> expected = this.service.getAll();
 		
 		assertEquals(expected, drinks);
